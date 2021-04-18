@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mysqldb:
+    image: mysql:5.7
+    container_name: mysqldb_go_insinyur_radius
+    ports:
+      - 9933:3306
+    # [public]:[local]
+    environment:
+      MYSQL_ROOT_PASSWORD: radius
+      MYSQL_DATABASE: radius
